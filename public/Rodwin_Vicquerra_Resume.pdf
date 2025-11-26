@@ -1,0 +1,278 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+/F2 5 0 R
+>>
+>>
+/MediaBox [0 0 612 792]
+/Contents 6 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<<
+/Length 4500
+>>
+stream
+BT
+/F1 24 Tf
+50 742 Td
+(RODWIN VICQUERRA) Tj
+ET
+
+BT
+/F2 10 Tf
+50 720 Td
+(Student Developer | Full Stack Developer) Tj
+ET
+
+BT
+/F2 9 Tf
+50 705 Td
+(Roxas, Isabela | +63 916 582 9185 | rodwindizvicquerra@gmail.com) Tj
+ET
+
+BT
+/F1 14 Tf
+50 675 Td
+(ABOUT ME) Tj
+ET
+
+BT
+/F2 9 Tf
+50 660 Td
+(3rd year IT student majoring in Web Development at St. Paul University Philippines.) Tj
+0 -12 Td
+(Passionate about creating modern, responsive, and user-friendly web applications that) Tj
+0 -12 Td
+(solve real-world problems. Developing skills in both front-end and back-end technologies,) Tj
+0 -12 Td
+(focusing on building clean, efficient, and scalable web solutions.) Tj
+ET
+
+BT
+/F1 14 Tf
+50 595 Td
+(EDUCATION) Tj
+ET
+
+BT
+/F1 10 Tf
+50 580 Td
+(Bachelor of Science in Information Technology) Tj
+ET
+
+BT
+/F2 9 Tf
+50 567 Td
+(St. Paul University Philippines | 2022 - Present) Tj
+0 -12 Td
+(Major in Web Development | Currently in 3rd year) Tj
+0 -12 Td
+(Focus: Full-stack web development, database management, software engineering) Tj
+ET
+
+BT
+/F1 10 Tf
+50 525 Td
+(Certifications & Achievements) Tj
+ET
+
+BT
+/F2 9 Tf
+50 512 Td
+(- CyberSummit 2022, 2023, 2024 - St. Paul University Philippines) Tj
+0 -12 Td
+(- HackTheNorth Seminar 2025 - St. Paul University Philippines) Tj
+0 -12 Td
+(- Rich Media Film Showing - 1st Runner Up \(2024\)) Tj
+ET
+
+BT
+/F1 14 Tf
+50 465 Td
+(TECHNICAL SKILLS) Tj
+ET
+
+BT
+/F1 10 Tf
+50 450 Td
+(Frontend Development) Tj
+ET
+
+BT
+/F2 9 Tf
+50 437 Td
+(React | Next.js | TypeScript | JavaScript | HTML5 | CSS3 | Tailwind CSS | Responsive Design) Tj
+ET
+
+BT
+/F1 10 Tf
+50 420 Td
+(Backend Development) Tj
+ET
+
+BT
+/F2 9 Tf
+50 407 Td
+(Node.js | Laravel | PHP | Express.js | RESTful APIs | Authentication | Server Management) Tj
+ET
+
+BT
+/F1 10 Tf
+50 390 Td
+(Database & ORM) Tj
+ET
+
+BT
+/F2 9 Tf
+50 377 Td
+(MySQL | PostgreSQL | Prisma | SQL | Database Design | Data Modeling) Tj
+ET
+
+BT
+/F1 10 Tf
+50 360 Td
+(Tools & Technologies) Tj
+ET
+
+BT
+/F2 9 Tf
+50 347 Td
+(Git | GitHub | Vercel | Docker | npm/pnpm | VS Code | Postman | CI/CD) Tj
+ET
+
+BT
+/F1 14 Tf
+50 320 Td
+(FEATURED PROJECTS) Tj
+ET
+
+BT
+/F1 10 Tf
+50 305 Td
+(Professional Portfolio with RBAC) Tj
+ET
+
+BT
+/F2 9 Tf
+50 292 Td
+(Complete professional portfolio featuring enterprise-grade security with Role-Based) Tj
+0 -12 Td
+(Access Control \(RBAC\) using Clerk. Includes admin-only security dashboard, MCP integration,) Tj
+0 -12 Td
+(OAuth-protected API endpoints, and comprehensive security documentation.) Tj
+0 -12 Td
+(Technologies: Next.js 14, TypeScript, Clerk RBAC, OAuth 2.0, Security Headers, Vercel) Tj
+0 -12 Td
+(Security Score: 95/100) Tj
+ET
+
+BT
+/F1 10 Tf
+50 225 Td
+(OAuth MCP Authentication Demo) Tj
+ET
+
+BT
+/F2 9 Tf
+50 212 Td
+(Customized Model Context Protocol authentication demo with end-to-end OAuth flow.) Tj
+0 -12 Td
+(Features deployment URL with working authentication, client setup playbook, and) Tj
+0 -12 Td
+(comprehensive security documentation.) Tj
+0 -12 Td
+(Technologies: OAuth, MCP, Claude Desktop, VS Code, Security) Tj
+ET
+
+BT
+/F1 10 Tf
+50 165 Td
+(Barangay Portal System) Tj
+ET
+
+BT
+/F2 9 Tf
+50 152 Td
+(Full-featured barangay management system for local government digital transformation.) Tj
+0 -12 Td
+(Built full-stack portal with PHP/MySQL for records and document management.) Tj
+0 -12 Td
+(Technologies: PHP, MySQL, HTML, CSS, WAMP) Tj
+0 -12 Td
+(Manages 1000+ records with <2s response time) Tj
+ET
+
+BT
+/F1 10 Tf
+50 105 Td
+(Digital Portfolio v2) Tj
+ET
+
+BT
+/F2 9 Tf
+50 92 Td
+(Advanced portfolio version featuring Prisma database integration for authentication.) Tj
+0 -12 Td
+(Demonstrates full-stack capabilities and modern deployment practices.) Tj
+0 -12 Td
+(Technologies: React, Prisma, PostgreSQL, Vercel) Tj
+ET
+
+BT
+/F2 8 Tf
+50 50 Td
+(GitHub: github.com/rodwinvicquerra | LinkedIn: linkedin.com/in/rodwin-vicquerra-957630387) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000068 00000 n 
+0000000125 00000 n 
+0000000267 00000 n 
+0000000350 00000 n 
+0000000428 00000 n 
+trailer
+<<
+/Size 7
+/Root 1 0 R
+>>
+startxref
+4980
+%%EOF
