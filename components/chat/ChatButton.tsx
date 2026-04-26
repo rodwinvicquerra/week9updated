@@ -4,16 +4,9 @@ import { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ChatWidget } from './ChatWidget';
-import { useAuth } from '@clerk/nextjs';
 
 export function ChatButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const { isSignedIn } = useAuth();
-
-  // Only show chat button if user is signed in
-  if (!isSignedIn) {
-    return null;
-  }
 
   return (
     <>
