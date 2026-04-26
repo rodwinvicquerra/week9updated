@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server"
-import { currentUser } from "@clerk/nextjs/server"
 import { ids } from "@/lib/security/ids"
 import { cspReporter } from "@/lib/security/csp-reporter"
 import { getSecureHeaders } from "@/lib/security"
@@ -12,26 +11,6 @@ export const dynamic = 'force-dynamic'
  */
 export async function GET(req: NextRequest) {
   try {
-    const user = await currentUser()
-    
-    if (!user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401, headers: getSecureHeaders() }
-      )
-    }
-
-    // Check admin role
-    const publicMetadata = user.publicMetadata as { role?: string } | undefined
-    const role = (publicMetadata?.role || 'viewer').toLowerCase()
-    
-    if (role !== 'admin') {
-      return NextResponse.json(
-        { error: 'Forbidden - Admin access required' },
-        { status: 403, headers: getSecureHeaders() }
-      )
-    }
-
     // Get IDS stats and events
     const idsStats = ids.getStats()
     const recentSecurityEvents = ids.getRecentEvents(20)

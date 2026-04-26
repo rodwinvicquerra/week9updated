@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { useUser, useClerk } from "@clerk/nextjs"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -25,8 +24,6 @@ interface ClerkUser {
 
 export function AdminDashboard() {
   const router = useRouter()
-  const { user } = useUser()
-  const { signOut } = useClerk()
   const [activeTab, setActiveTab] = useState("overview")
   const [users, setUsers] = useState<ClerkUser[]>([])
   const [loading, setLoading] = useState(true)
@@ -114,8 +111,7 @@ export function AdminDashboard() {
   }
 
   const handleLogout = async () => {
-    await signOut()
-    router.push("/sign-in")
+    router.push("/portfolio")
   }
 
   if (loading && activeTab === "overview") {

@@ -5,8 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Lock, Server, Code, Play, FileCode, ArrowRight, CheckCircle, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { currentUser } from "@clerk/nextjs/server"
-import { AccessDenied } from "@/components/common"
 
 export const metadata: Metadata = {
   title: "MCP Integration Demo - Rodwin Vicquerra",
@@ -18,20 +16,6 @@ export const metadata: Metadata = {
 }
 
 export default async function MCPIntegrationPage() {
-  // Get current user with metadata
-  const user = await currentUser()
-  
-  if (!user) {
-    return <AccessDenied />
-  }
-
-  // Check for admin role in publicMetadata (case-insensitive)
-  const publicMetadata = user.publicMetadata as { role?: string } | undefined
-  const role = (publicMetadata?.role || 'viewer').toLowerCase()
-  
-  if (role !== 'admin') {
-    return <AccessDenied />
-  }
 
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">

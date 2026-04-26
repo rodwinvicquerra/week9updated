@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Shield, Lock, Activity, CheckCircle2, AlertTriangle, Download, ExternalLink, TrendingUp, Users, Zap, FileText, ArrowLeft, Home, MessageSquare } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { currentUser, clerkClient } from "@clerk/nextjs/server"
-import { AccessDenied } from "@/components/common"
 
 export const metadata: Metadata = {
   title: "Security Portfolio - Rodwin Vicquerra",
@@ -17,24 +15,6 @@ export const metadata: Metadata = {
 }
 
 export default async function SecurityPage() {
-  // Get current user with metadata
-  const user = await currentUser()
-  
-  if (!user) {
-    return <AccessDenied />
-  }
-
-  // Check for admin role in publicMetadata (case-insensitive)
-  const publicMetadata = user.publicMetadata as { role?: string } | undefined
-  const role = (publicMetadata?.role || 'viewer').toLowerCase()
-  
-  if (role !== 'admin') {
-    return <AccessDenied />
-  }
-
-  // Fetch real user count from Clerk
-  const { data: users } = await clerkClient.users.getUserList()
-  const userCount = users.length
 
   return (
     <div className="min-h-screen bg-background py-6 px-4 sm:px-6 lg:px-8">
@@ -153,7 +133,7 @@ export default async function SecurityPage() {
             </div>
             <div className="border border-border rounded-lg p-4 text-center hover:border-primary/50 transition-colors">
               <Users className="h-6 w-6 text-foreground/70 mx-auto mb-2" />
-              <div className="text-2xl font-bold mb-1">{userCount}</div>
+              <div className="text-2xl font-bold mb-1">1</div>
               <div className="text-xs text-muted-foreground">Authenticated Users</div>
             </div>
           </div>
