@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/common"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { UserButton, useAuth, useUser } from "@clerk/nextjs"
 import Link from "next/link"
 
 const navItems = [
@@ -14,7 +13,6 @@ const navItems = [
   { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
   { name: "Documentation", href: "/documentation", isExternal: true },
-  { name: "Security", href: "/security", isExternal: true, adminOnly: true },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -22,23 +20,13 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
-  const { isSignedIn } = useAuth()
-  const { user } = useUser()
-
-  // Check if user has admin role (case-insensitive)
-  const publicMetadata = user?.publicMetadata as { role?: string } | undefined
-  const role = publicMetadata?.role?.toLowerCase() || ''
-  const isAdmin = role === 'admin'
-
-  // Filter nav items based on admin status
-  const visibleNavItems = navItems.filter(item => !item.adminOnly || isAdmin)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
       
       // Detect active section
-      const sections = visibleNavItems
+      const sections = navItems
         .filter(item => !item.isExternal)
         .map(item => item.href.replace('#', ''))
       
@@ -57,7 +45,7 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll)
     handleScroll() // Check on mount
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [visibleNavItems])
+  }, [])
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
@@ -83,7 +71,7 @@ export function Navigation() {
               Rodwin's Portfolio
             </button>
             <div className="hidden md:flex items-center gap-1">
-              {visibleNavItems.map((item) =>
+              {navItems.map((item) =>
                 item.isExternal ? (
                   <a 
                     key={item.name} 
@@ -119,11 +107,9 @@ export function Navigation() {
               )}
               <div className="ml-4 flex items-center gap-3 pl-4 border-l border-border">
                 <ThemeToggle />
-                {isSignedIn && <UserButton afterSignOutUrl="/sign-in" />}
               </div>
             </div>
             <div className="flex md:hidden items-center gap-2">
-              {isSignedIn && <UserButton afterSignOutUrl="/sign-in" />}
               <ThemeToggle />
               <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="hover:bg-muted/50">
                 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -137,7 +123,7 @@ export function Navigation() {
           <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
           <div className="fixed top-16 left-0 right-0 bg-card border-b border-border shadow-lg">
             <div className="px-4 py-6 space-y-1">
-              {visibleNavItems.map((item) =>
+              {navItems.map((item) =>
                 item.isExternal ? (
                   <Link 
                     key={item.name} 
